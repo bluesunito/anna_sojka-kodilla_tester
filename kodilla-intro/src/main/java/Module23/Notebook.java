@@ -1,4 +1,4 @@
-package Module2;
+package Module23;
 
 public class Notebook {
     int weight;
