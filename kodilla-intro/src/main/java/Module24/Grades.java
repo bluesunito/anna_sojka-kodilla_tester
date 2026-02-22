@@ -1,5 +1,3 @@
-package Module24;
-
 public class Grades {
     private int[] grades;
     private int size;
@@ -23,9 +21,10 @@ public class Grades {
         }else {
             System.out.println("Student has no grades yet.");
         }
+        return lastGrade();
     }
 
-    public int calculateAvg(){
+    public double calculateAvg(){
         if (this.size > 0){
             int sum = 0;
             for (int n = 0; n<this.size; n++){
@@ -36,6 +35,6 @@ public class Grades {
         }else {
             System.out.println("Student has no grades yet, no average available.");
         }
-
+        return calculateAvg();
     }
 }
