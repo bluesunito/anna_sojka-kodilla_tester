@@ -1,6 +1,8 @@
 package com.kodilla.collections.interfaces.homework;
 
-    public class Opel implements Car {
+import java.util.Objects;
+
+public class Opel implements Car {
 
         private int speed;
 
@@ -22,4 +24,18 @@ package com.kodilla.collections.interfaces.homework;
         public void decreaseSpeed() {
             speed -= 8;
         }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Opel opel = (Opel) o;
+        return speed == opel.speed;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(speed);
+    }
+}
